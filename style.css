@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #f83838;
+}
+
+/* HERO CONTENT */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+}
+
+.details h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.details span {
+    color: #f83838;
+}
+
+.details p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+.buttons a {
+    text-decoration: none;
+    background: #38bdf8;
+    padding: 12px 22px;
+    margin-right: 15px;
+    border-radius: 6px;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+.buttons a:hover {
+    background: #e90e62;
+    color: white;
+}
+
+.images img {
+    width: 420px;
+}
+
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+}
+
+/* SERVICES */
+.service-box,
+.project-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card,
+.project {
+    background: #020617;
+    padding: 25px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* CONTACT */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    padding: 12px 25px;
+    background: #38f8ef;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #10302f;
+    padding: 20px;
+    text-align: center;
+    color: red;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content,
+section {
+    animation: fadeUp 1s ease-in-out;
+}
+
+/* CARD EFFECTS */
+.card,
+.project {
+    transition: all 0.3s ease;
+}
+
+.card:hover,
+.project:hover {
+    transform: translateY(-8px);
+    background: #020617;
+    box-shadow: 0 10px 25px rgba(236, 16, 4, 0.4);
+}
+
+/* BUTTON EFFECT */
+.buttons a,
+button {
+    transition: all 0.3s ease;
+}
+
+.buttons a:hover,
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(248, 78, 56, 0.5);
+color: white;}
+
+@media (max-width: 768px) {
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .images img {
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+.card {
+    background: #020617;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.card p {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 500;
+}
+.services {
+    padding: 70px 8%;
+    background: linear-gradient(to right, #f8f9ff, #eef1ff);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #222;
+}
+
+.service-intro {
+    color: #666;
+    margin: 10px 0 40px;
+}
+
+.service-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card i {
+    font-size: 45px;
+    color: #4a6cf7;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #4a6cf7;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2f4adf;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+}
+.contact {
+    padding: 70px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-box {
+    max-width: 500px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-box input,
+.contact-box select,
+.contact-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.contact-box button {
+    width: 100%;
+    padding: 12px;
+    background: #4a6cf7;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-box button:hover {
+    background: #2f4adf;
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #fff;
+    font-size: 28px;
+    padding: 14px 16px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background: #1ebd5a;
+}
+.map {
+    padding: 60px 8%;
+    background: #e0d1d1;
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.map p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.project-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #4a6cf7;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.project:hover {
+    background: #2f4adf;
+    transform: translateY(-5px);
+}
+
